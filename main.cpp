@@ -21,7 +21,10 @@ class Mammal : public Animal
   public:
   void Howl(){ std::cout<< " Howl Howl \n";}
   void MorningRoutine(){std::cout << "Pee \n";}
-};
+  // for our MorningRoutine we could have also said this 
+  // virtual void MorningRoutine() override{std::cout << "Fart\n";}
+  // the virutal and override keyword in the child class is optional but it gets included as "Best practises"
+ };
 class Wolf : public Mammal
 {
   public:
@@ -50,6 +53,7 @@ int main()
   std::cout << Ken->GetLocation().X << "\n";
 
   // Assigments 
+  // The assigment works because Mammal inherits from animal so it would have all the same functionality as an animal 
   Animal* MessyAnimal = randomMamal;
   MessyAnimal->MorningRoutine();
 
